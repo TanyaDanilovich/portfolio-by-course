@@ -1,12 +1,16 @@
 import { Logo } from "../components/Logo";
 import { Menu } from "../components/Menu";
 import styled from "styled-components";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Logo />
       <Menu />
+      <LanguageSwitcher />
+      <ThemeSwitcher />
     </StyledHeader>
   );
 };
