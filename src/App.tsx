@@ -1,20 +1,19 @@
-import './App.css';
-import styled from 'styled-components';
-import {Header} from './layouts/Header';
-
+import './App.css'
+import styled from 'styled-components'
+import { Header } from './layouts/Header'
 
 function App() {
     return (
         <div className="App">
-            <Header/>
+            <Header />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
 
 const Title = styled.h1`
     font-size: 1.5em;
     text-align: center;
     color: #e91e63;
-`;
+`
