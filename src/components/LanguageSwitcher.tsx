@@ -1,19 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 type props = {
-  // height?: string
-  // width?: string
-};
+    // height?: string
+    // width?: string
+}
 export const LanguageSwitcher = ({}: props) => {
-  return (<select>
-        <option>ru</option>
-        <option>en</option>
-        <option>pl</option>
-        <option>by</option>
-      </select>
-
-  );
-};
+    return (
+        <select>
+            <option>ru</option>
+            <option>en</option>
+            <option>pl</option>
+            <option>by</option>
+        </select>
+    )
+}
 
 // type StyledMenuProps = {
 //
