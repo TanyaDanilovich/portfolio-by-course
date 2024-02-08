@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import photo from "../assets/jpg/person-01-630x866.jpg";
 
 export const Intro = () => {
   return (
     <StyledIntro>
-
       <div>
         <span>Hi!</span>
         <StyledIntroTitle>I'm a designer</StyledIntroTitle>
@@ -12,9 +12,8 @@ export const Intro = () => {
       </div>
 
       <div>
-        <img alt={'photo'} src={''} />
+        <img alt={"photo"} src={photo} />
       </div>
-
     </StyledIntro>
   );
 };
