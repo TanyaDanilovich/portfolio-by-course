@@ -38,5 +38,5 @@ type StyledIconProps = {
     // width?: string
 }
 const StyledIcon = styled.svg<StyledIconProps>`
-  fill: ${theme.colors.primary};
+  fill: ${theme.colors.contrastBackground_1};
 `
