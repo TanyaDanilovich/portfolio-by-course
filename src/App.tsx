@@ -1,11 +1,13 @@
 import './App.css'
 import styled from 'styled-components'
 import { Header } from './layouts/Header'
+import {Intro} from './layouts/Intro';
 
 function App() {
     return (
         <div className="App">
             <Header />
+            <Intro/>
         </div>
     )
 }
