@@ -4,6 +4,6 @@ type SectionMainTitleProps = {
   // height?: string
   // width?: string
 };
-export const SectionMainTitle = styled.section<SectionMainTitleProps>`
+export const SectionMainTitle = styled.h1<SectionMainTitleProps>`
   
 `;

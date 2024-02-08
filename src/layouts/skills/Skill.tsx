@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+
 import { SkillType } from "./skill.types.";
 import React from "react";
 import { Icon } from "../../components/Icon";
+import {SectionSecondaryTitle} from '../../components/styled/SectionSecondaryTitle';
 
 type props = SkillType;
 export const Skill = ({ title, text, icon }: props) => {
   return (
     <StyledSkill>
-      <SectionMainTitle>{title}</SectionMainTitle>
+      <SectionSecondaryTitle>{title}</SectionSecondaryTitle>
 
       <SkillText>{text}</SkillText>
       <Icon
@@ -23,7 +24,7 @@ export const Skill = ({ title, text, icon }: props) => {
 };
 
 type StyledSkillProps = {};
-const StyledSkill = styled.div<StyledSkillProps>``;
+const StyledSkill = styled.article<StyledSkillProps>``;
 
 type StyleSkillTitleProps = {};
 const StyleSkillTitle = styled.h2<StyleSkillTitleProps>``;
