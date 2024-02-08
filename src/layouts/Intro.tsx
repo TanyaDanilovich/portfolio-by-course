@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import photo from "../assets/jpg/person-01-630x866.jpg";
+import photo from "../assets/jpg/photo/person-01-630x866.jpg";
 
 export const Intro = () => {
   return (
