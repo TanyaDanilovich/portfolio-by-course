@@ -5,31 +5,34 @@ import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { worksData } from "./worksData";
 import { Work } from "./Work";
+import { SectionWrapper } from "../../components/styled/SectionWrapper";
 
 export const Works = () => {
   return (
     <StyledSection>
-      <SectionMainTitle>My works</SectionMainTitle>
-      <SectionText>
-        Check out my recent and popular design & branding projects I have worked
-        on.
-      </SectionText>
-      <div>
-        {worksData.map((work) => (
-          <Work
-            id={work.id}
-            title={work.title}
-            text={work.text}
-            imageUrl={work.imageUrl}
-          />
-        ))}
-      </div>
+      <SectionWrapper>
+        <SectionMainTitle>My works</SectionMainTitle>
+        <SectionText>
+          Check out my recent and popular design & branding projects I have
+          worked on.
+        </SectionText>
+        <WorkContent>
+          {worksData.map((work) => (
+            <Work
+              id={work.id}
+              title={work.title}
+              text={work.text}
+              imageUrl={work.imageUrl}
+            />
+          ))}
+        </WorkContent>
+      </SectionWrapper>
     </StyledSection>
   );
 };
 
-type StyledWorksTitleProps = {
+type WorkContentProps = {
   // height?: string
   // width?: string
 };
-const StyledWorksTitle = styled.h1<StyledWorksTitleProps>``;
+const WorkContent = styled.div<WorkContentProps>``;
