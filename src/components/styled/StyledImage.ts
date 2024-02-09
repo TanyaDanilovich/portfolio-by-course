@@ -5,5 +5,6 @@ type StyledImageProps = {
   // width?: string
 };
 export const StyledImage = styled.img<StyledImageProps>`
-  
+ 
+  object-fit:cover;
 `;

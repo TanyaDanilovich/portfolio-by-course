@@ -20,7 +20,9 @@ export const Work = ({ id, text, title, imageUrl }: props) => {
 };
 
 type StyledWorkProps = {};
-const StyledWork = styled.article<StyledWorkProps>``;
+const StyledWork = styled.article<StyledWorkProps>`
+width:30%;
+`;
 
 type WorkTextProps = {};
 const WorkText = styled.p<WorkTextProps>``;

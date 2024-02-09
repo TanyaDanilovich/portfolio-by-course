@@ -11,4 +11,11 @@ export const theme = {
     grayMedium: "#ABB3BA",
     light: "#fff",
   },
+  breakpoint: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    xxl: "1536px",
+  },
 };
