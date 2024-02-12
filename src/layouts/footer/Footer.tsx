@@ -20,10 +20,10 @@ export const Footer = () => {
           <p>+375(29)8-223-322</p>
         </div>
         <StyledFlexWrapper>
-          <ol>
-            <SocialLinksList>
-              {socialNetworksData.map((link) => (
-                <SocialLink title={link.icon.iconId}>
+          <SocialLinksList>
+            {socialNetworksData.map((link) => (
+              <SocialLink title={link.icon.iconId}>
+                <a>
                   <Icon
                     key={link.id}
                     sprite={socialNetworkSprite}
@@ -31,10 +31,10 @@ export const Footer = () => {
                     height={"22px"}
                     id={link.icon.iconId}
                   />
-                </SocialLink>
-              ))}
-            </SocialLinksList>
-          </ol>
+                </a>
+              </SocialLink>
+            ))}
+          </SocialLinksList>
         </StyledFlexWrapper>
         <Menu />
         <Copiryting>
@@ -46,10 +46,10 @@ export const Footer = () => {
 };
 
 type SocialLinksListProps = {};
-const SocialLinksList = styled.li<SocialLinksListProps>``;
+const SocialLinksList = styled.ul<SocialLinksListProps>``;
 
 type SocialLinkProps = {};
-const SocialLink = styled.a<SocialLinkProps>`
+const SocialLink = styled.li<SocialLinkProps>`
   cursor: pointer;
 `;
 
