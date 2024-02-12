@@ -12,8 +12,8 @@ type props = {
 export const Icon = ({
                          id,
                          sprite = iconSprite,
-                         width = '50',
-                         height = '50',
+                         width = '20',
+                         height = '20',
                          viewBox,
                      }: props) => {
     return (
@@ -38,5 +38,5 @@ type StyledIconProps = {
     // width?: string
 }
 const StyledIcon = styled.svg<StyledIconProps>`
-  fill: ${theme.colors.contrastBackground_1};
+  fill: ${theme.colors.contrastBackground_2};
 `

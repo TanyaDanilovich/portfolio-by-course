@@ -26,7 +26,6 @@ export const About = () => {
           </div>
         </StyledAbout>
       </SectionWrapper>
-      s
     </StyledSection>
   );
 };
