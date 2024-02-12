@@ -2,12 +2,12 @@ import styled from "styled-components";
 import photo from "../assets/jpg/photo/image-01-424x491.jpg";
 import { SectionText } from "../components/styled/SectionText";
 import { StyledSection } from "../components/styled/StyledSection";
-import { SectionWrapper } from "../components/styled/SectionWrapper";
+import { Container } from "../components/styled/Container";
 
 export const About = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <StyledAbout>
           <div>
             <StyledAboutTitle>About me</StyledAboutTitle>
@@ -25,7 +25,7 @@ export const About = () => {
             <img alt={"portrait"} src={photo} />
           </div>
         </StyledAbout>
-      </SectionWrapper>
+      </Container>
     </StyledSection>
   );
 };

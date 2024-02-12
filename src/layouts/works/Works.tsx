@@ -5,12 +5,12 @@ import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { worksData } from "./worksData";
 import { Work } from "./Work";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { Container } from "../../components/styled/Container";
 
 export const Works = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <SectionMainTitle>My works</SectionMainTitle>
         <SectionText>
           Check out my recent and popular design & branding projects I have
@@ -26,7 +26,7 @@ export const Works = () => {
             />
           ))}
         </WorkContent>
-      </SectionWrapper>
+      </Container>
     </StyledSection>
   );
 };

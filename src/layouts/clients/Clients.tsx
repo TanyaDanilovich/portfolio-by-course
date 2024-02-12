@@ -5,12 +5,12 @@ import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { clientsData } from "./clientsData";
 import { Client } from "./Client";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { Container } from "../../components/styled/Container";
 
 export const Clients = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <SectionMainTitle>My clients</SectionMainTitle>
         <SectionText>
           Read the testimonials submitted by my clients and partners. You can
@@ -26,7 +26,7 @@ export const Clients = () => {
             />
           ))}
         </ClientContent>
-      </SectionWrapper>
+      </Container>
     </StyledSection>
   );
 };

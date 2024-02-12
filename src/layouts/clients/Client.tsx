@@ -13,7 +13,7 @@ export const Client = ({ text, name, imageUrl }: props) => {
         width={"70px"}
         height={"70px"}
         radius={"50%"}
-        background={theme.colors.contrastBackground_2}
+        background={theme.colors.accent_2}
         opacity={"0.5"}
       >
         {imageUrl && <StyledImage src={imageUrl} />}

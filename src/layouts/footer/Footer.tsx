@@ -1,9 +1,9 @@
 import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { Container } from "../../components/styled/Container";
 import styled from "styled-components";
 import { StyledButton } from "../../components/styled/StyledButton";
 import React from "react";
-import { StyledFlexWrapper } from "../../components/styled/StyledFlexWrapper";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { Icon } from "../../components/Icon";
 import { socialNetworksData } from "./socialLinksData";
 import socialNetworkSprite from "../../assets/svg/socialNetworkSprite.svg";
@@ -12,14 +12,14 @@ import { Menu } from "../../components/Menu";
 export const Footer = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <div>
           <StyledButton>Here me</StyledButton>
           <p>hello@gmail.com</p>
           <p>Minsk</p>
           <p>+375(29)8-223-322</p>
         </div>
-        <StyledFlexWrapper>
+        <FlexWrapper>
           <SocialLinksList>
             {socialNetworksData.map((link) => (
               <SocialLink title={link.icon.iconId}>
@@ -35,12 +35,12 @@ export const Footer = () => {
               </SocialLink>
             ))}
           </SocialLinksList>
-        </StyledFlexWrapper>
+        </FlexWrapper>
         <Menu />
         <Copiryting>
           © 2023 Tatsiana Danilovich, All Rights Reserved.
         </Copiryting>
-      </SectionWrapper>
+      </Container>
     </StyledSection>
   );
 };

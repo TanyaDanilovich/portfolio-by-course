@@ -1,18 +1,15 @@
-import styled from 'styled-components'
-import logo from '../assets/png/logo-default-228x67.png'
+import styled from "styled-components";
+import logo from "../assets/png/logo-default-228x67.png";
 
 type props = {
-    // height?: string
-    // width?: string
-}
+  height?: string;
+};
 export const Logo = ({}: props) => {
-    return <StyledLogo src={logo} />
-}
+  return <StyledLogo src={logo} height={"2rem"} />;
+};
 
-type StyledLogoProps = {
-    // height?: string
-    // width?: string
-}
+type StyledLogoProps = {};
 const StyledLogo = styled.img<StyledLogoProps>`
-    height: 100%;
-`
+  height: 100%;
+  max-height: ${(props) => props.height || "100%"};
+`;

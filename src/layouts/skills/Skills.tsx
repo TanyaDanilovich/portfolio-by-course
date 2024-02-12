@@ -2,15 +2,15 @@ import { StyledSection } from "../../components/styled/StyledSection";
 import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
 import { skillsData } from "./skillsData";
 import { Skill } from "./Skill";
-import { StyledFlexWrapper } from "../../components/styled/StyledFlexWrapper";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { Container } from "../../components/styled/Container";
 
 export const Skills = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <SectionMainTitle>My Skills</SectionMainTitle>
-        <StyledFlexWrapper>
+        <FlexWrapper>
           {skillsData.map((skill) => (
             <Skill
               id={skill.id}
@@ -20,8 +20,8 @@ export const Skills = () => {
               icon={skill.icon}
             />
           ))}
-        </StyledFlexWrapper>
-      </SectionWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledSection>
   );
 };

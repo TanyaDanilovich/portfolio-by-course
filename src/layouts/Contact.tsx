@@ -1,6 +1,6 @@
 import { SectionText } from "../components/styled/SectionText";
 import { StyledSection } from "../components/styled/StyledSection";
-import { SectionWrapper } from "../components/styled/SectionWrapper";
+import { Container } from "../components/styled/Container";
 import styled from "styled-components";
 import { SectionMainTitle } from "../components/styled/SectionMainTitle";
 import { StyledButton } from "../components/styled/StyledButton";
@@ -8,7 +8,7 @@ import { StyledButton } from "../components/styled/StyledButton";
 export const Contact = () => {
   return (
     <StyledSection>
-      <SectionWrapper>
+      <Container>
         <SectionMainTitle>Get in Touch</SectionMainTitle>
         <SectionText>
           Feel free to contact me. I am availablr for freelance!
@@ -36,7 +36,7 @@ export const Contact = () => {
 
           <StyledButton type={"submit"}>Send Message</StyledButton>
         </StyledForm>
-      </SectionWrapper>
+      </Container>
     </StyledSection>
   );
 };
