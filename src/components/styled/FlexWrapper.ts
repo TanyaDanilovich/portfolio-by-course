@@ -6,7 +6,9 @@ type StyledFlexWrapperProps = {
   align?: string;
   wrap?: string;
   gap?: string;
-  grow?:string
+  columnGap?: string;
+  rowGap?: string;
+  grow?: string;
 };
 export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   display: flex;
@@ -15,6 +17,8 @@ export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   flex-grow: ${(props) => props.grow || "0"};
-  gap: ${(props) => props.gap || "0"};
+  column-gap: ${(props) => props.gap || props.columnGap || "0"};
+  row-gap: ${(props) => props.gap || props.rowGap || "0"};
   height: 100%;
+  outline: 2px solid blue;
 `;

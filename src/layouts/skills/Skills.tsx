@@ -32,6 +32,10 @@ export const Skills = () => {
 
 type StyledSkillsProps = {};
 const StyledSkills = styled.div<StyledSkillsProps>`
+  div:first-of-type {
+    padding: 0;
+  }
+
   h2 {
     width: 1px;
     height: 1px;
@@ -41,6 +45,7 @@ const StyledSkills = styled.div<StyledSkillsProps>`
   h2:before {
     display: none;
   }
-  background-color:${theme.colors.dark};
-  width:100%;
+
+  background-color: ${theme.colors.dark};
+  width: 100%;
 `;

@@ -6,10 +6,11 @@ export const theme = {
     lightBg: "#fdf7f1",
     accent_1: "#ee6451",
     accent_2: "#b9e1d7",
+    grayMedium: "#ABB3BA",
   },
   typography: {
     dark: "#000",
-    grayMedium: "#ABB3BA",
+
     light: "#fff",
   },
   breakpoint: {

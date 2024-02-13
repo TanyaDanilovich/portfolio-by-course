@@ -7,4 +7,5 @@ type SectionProps = {
 export const Section = styled.section<SectionProps>`
   border: 1px solid lawngreen;
   display: flex;
+  padding: 100px 0;
 `;
