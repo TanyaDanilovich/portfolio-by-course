@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+import { Section } from "../../components/styled/Section";
+import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { worksData } from "./worksData";
@@ -9,9 +9,9 @@ import { Container } from "../../components/styled/Container";
 
 export const Works = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container>
-        <SectionMainTitle>My works</SectionMainTitle>
+        <SectionTitle>My works</SectionTitle>
         <SectionText>
           Check out my recent and popular design & branding projects I have
           worked on.
@@ -27,7 +27,7 @@ export const Works = () => {
           ))}
         </WorkContent>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

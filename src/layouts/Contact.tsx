@@ -1,15 +1,15 @@
 import { SectionText } from "../components/styled/SectionText";
-import { StyledSection } from "../components/styled/StyledSection";
+import { Section } from "../components/styled/Section";
 import { Container } from "../components/styled/Container";
 import styled from "styled-components";
-import { SectionMainTitle } from "../components/styled/SectionMainTitle";
+import { SectionTitle } from "../components/styled/SectionTitle";
 import { StyledButton } from "../components/styled/StyledButton";
 
 export const Contact = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container>
-        <SectionMainTitle>Get in Touch</SectionMainTitle>
+        <SectionTitle>Get in Touch</SectionTitle>
         <SectionText>
           Feel free to contact me. I am availablr for freelance!
         </SectionText>
@@ -37,7 +37,7 @@ export const Contact = () => {
           <StyledButton type={"submit"}>Send Message</StyledButton>
         </StyledForm>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

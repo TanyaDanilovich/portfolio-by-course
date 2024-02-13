@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
+import {theme} from './Theme.styled';
 
 export const GlobalStyle =createGlobalStyle`
   *,
@@ -7,6 +8,7 @@ export const GlobalStyle =createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
   }
 
   body {
@@ -17,6 +19,7 @@ export const GlobalStyle =createGlobalStyle`
     'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color:${theme.colors.dark}
   }
 
   a {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+import { Section } from "../../components/styled/Section";
+import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { clientsData } from "./clientsData";
@@ -9,9 +9,9 @@ import { Container } from "../../components/styled/Container";
 
 export const Clients = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container>
-        <SectionMainTitle>My clients</SectionMainTitle>
+        <SectionTitle>My clients</SectionTitle>
         <SectionText>
           Read the testimonials submitted by my clients and partners. You can
           fully trust their opinions on my solutions.
@@ -27,7 +27,7 @@ export const Clients = () => {
           ))}
         </ClientContent>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

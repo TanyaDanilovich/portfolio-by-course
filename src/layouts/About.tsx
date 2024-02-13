@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import photo from "../assets/jpg/photo/image-01-424x491.jpg";
 import { SectionText } from "../components/styled/SectionText";
-import { StyledSection } from "../components/styled/StyledSection";
+import { Section } from "../components/styled/Section";
 import { Container } from "../components/styled/Container";
 
 export const About = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container>
         <StyledAbout>
           <div>
@@ -26,7 +26,7 @@ export const About = () => {
           </div>
         </StyledAbout>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

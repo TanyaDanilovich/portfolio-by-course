@@ -30,8 +30,9 @@ type StyledHeaderProps = {};
 const StyledHeader = styled.header<StyledHeaderProps>`
   display: flex;
   justify-content: space-between;
+  align-items:center;
   background-color: ${theme.colors.lightBg};
-  height: 140px;
+  min-height: 140px;
   font-size: 20px;
 `;
 

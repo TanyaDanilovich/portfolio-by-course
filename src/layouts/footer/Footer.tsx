@@ -1,4 +1,4 @@
-import { StyledSection } from "../../components/styled/StyledSection";
+import { Section } from "../../components/styled/Section";
 import { Container } from "../../components/styled/Container";
 import styled from "styled-components";
 import { StyledButton } from "../../components/styled/StyledButton";
@@ -11,7 +11,7 @@ import { Menu } from "../../components/Menu";
 
 export const Footer = () => {
   return (
-    <StyledSection>
+    <Section>
       <Container>
         <div>
           <StyledButton>Here me</StyledButton>
@@ -41,7 +41,7 @@ export const Footer = () => {
           © 2023 Tatsiana Danilovich, All Rights Reserved.
         </Copiryting>
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

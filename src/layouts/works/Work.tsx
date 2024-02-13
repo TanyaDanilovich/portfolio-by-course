@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledSection } from "../../components/styled/StyledSection";
+import { Section } from "../../components/styled/Section";
 import { SectionSecondaryTitle } from "../../components/styled/SectionSecondaryTitle";
 import { WorkType } from "./work.types.";
 import { StyledImage } from "../../components/styled/StyledImage";
