@@ -20,5 +20,5 @@ export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   column-gap: ${(props) => props.gap || props.columnGap || "0"};
   row-gap: ${(props) => props.gap || props.rowGap || "0"};
   height: 100%;
-  outline: 2px solid blue;
+  //outline: 2px solid blue;
 `;

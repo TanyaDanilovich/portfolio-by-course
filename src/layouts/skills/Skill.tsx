@@ -30,7 +30,7 @@ export const Skill = ({ title, text, icon }: props) => {
 
 type StyledSkillProps = {};
 const StyledSkill = styled.article<StyledSkillProps>`
-  padding: 2rem;
+  padding: 1rem;
   outline: 1px solid rgba(255, 255, 255, 0.1);
 
   h3 {
