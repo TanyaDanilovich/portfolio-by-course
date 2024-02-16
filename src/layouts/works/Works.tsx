@@ -1,38 +1,40 @@
 import styled from "styled-components";
-import { Section } from "../../components/styled/Section";
 import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { worksData } from "./worksData";
 import { Work } from "./Work";
 import { Container } from "../../components/styled/Container";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { theme } from "../../styles/Theme.styled";
 
 export const Works = () => {
   return (
-    <Section>
+    <StyledWorks>
       <Container>
         <SectionTitle>My works</SectionTitle>
         <SectionText>
           Check out my recent and popular design & branding projects I have
           worked on.
         </SectionText>
-        <WorkContent>
+        <FlexWrapper>
           {worksData.map((work) => (
             <Work
+              key={work.id}
               id={work.id}
               title={work.title}
               text={work.text}
               imageUrl={work.imageUrl}
             />
           ))}
-        </WorkContent>
+        </FlexWrapper>
       </Container>
-    </Section>
+    </StyledWorks>
   );
 };
 
-type WorkContentProps = {
-  // height?: string
-  // width?: string
-};
-const WorkContent = styled.div<WorkContentProps>``;
+type StyledWorksProps = {};
+const StyledWorks = styled.section<StyledWorksProps>`
+  background-color: ${theme.colors.lightBg};
+  padding: 100px 0;
+`;

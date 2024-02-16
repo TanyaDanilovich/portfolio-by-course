@@ -3,11 +3,10 @@ import { theme } from "../../styles/Theme.styled";
 
 type SectionTitleProps = {};
 export const SectionTitle = styled.h2<SectionTitleProps>`
-  font-size: 4rem;
   line-height: 5rem;
   font-weight: 900;
   letter-spacing: 2px;
-  color: ${theme.colors.dark}
+  color: ${theme.colors.dark};
   position: relative;
   padding-left: 65px;
   //outline: 2px solid red;

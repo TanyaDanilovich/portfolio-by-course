@@ -3,6 +3,7 @@ import { theme } from "../../styles/Theme.styled";
 
 type LinkAsButtonProps = {};
 export const LinkAsButton = styled.a<LinkAsButtonProps>`
+  display: inline-block;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.25rem;

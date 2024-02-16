@@ -7,7 +7,7 @@ type StyledFlexWrapperProps = {
   wrap?: string;
   gap?: string;
   columnGap?: string;
-  rowGap?: string;
+  rowgap?: string;
   grow?: string;
 };
 export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
@@ -18,7 +18,7 @@ export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   flex-grow: ${(props) => props.grow || "0"};
   column-gap: ${(props) => props.gap || props.columnGap || "0"};
-  row-gap: ${(props) => props.gap || props.rowGap || "0"};
+  row-gap: ${(props) => props.gap || props.rowgap || "0"};
   height: 100%;
   //outline: 2px solid blue;
 `;

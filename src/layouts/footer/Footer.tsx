@@ -12,11 +12,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper
-          wrap={"wrap"}
-          gap={"2rem"}
-          // align={"center"}
-        >
+        <Grid>
           <Menu />
           <FooterContacts>
             <p>hello@gmail.com</p>
@@ -25,13 +21,12 @@ export const Footer = () => {
             <ul>
               <FlexWrapper direction={"row"} gap={"1rem"}>
                 {socialNetworksData.map((link) => (
-                  <SocialLink title={link.icon.iconId}>
+                  <SocialLink title={link.icon.iconId} key={link.id}>
                     <a>
                       <Icon
-                        key={link.id}
                         sprite={socialNetworkSprite}
-                        width={"22px"}
-                        height={"22px"}
+                        width={"22"}
+                        height={"22"}
                         id={link.icon.iconId}
                         fill={"rgba(255,255,255,0.3)"}
                       />
@@ -45,7 +40,7 @@ export const Footer = () => {
           <Copiryting>
             © 2023 Tatsiana Danilovich, All Rights Reserved.
           </Copiryting>
-        </FlexWrapper>
+        </Grid>
       </Container>
     </StyledFooter>
   );
@@ -88,7 +83,13 @@ const SocialLink = styled.li<SocialLinkProps>`
 `;
 
 type CopirytingProps = {};
-const Copiryting = styled.div<CopirytingProps>`
-  width: 100%;
-  text-align: center;
+const Copiryting = styled.small<CopirytingProps>`
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: smaller;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;

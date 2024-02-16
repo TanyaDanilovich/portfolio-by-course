@@ -1,38 +1,40 @@
 import styled from "styled-components";
-import { Section } from "../../components/styled/Section";
 import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { clientsData } from "./clientsData";
 import { Client } from "./Client";
 import { Container } from "../../components/styled/Container";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
 
 export const Clients = () => {
   return (
-    <Section>
+    <StyledClients>
       <Container>
         <SectionTitle>My clients</SectionTitle>
         <SectionText>
           Read the testimonials submitted by my clients and partners. You can
           fully trust their opinions on my solutions.
         </SectionText>
-        <ClientContent>
+        <FlexWrapper>
           {clientsData.map((client) => (
             <Client
+              key={client.id}
               id={client.id}
               name={client.name}
               text={client.text}
               imageUrl={client.imageUrl}
             />
           ))}
-        </ClientContent>
+        </FlexWrapper>
       </Container>
-    </Section>
+    </StyledClients>
   );
 };
 
-type ClientContentProps = {
+type StyledClientsProps = {
   // height?: string
   // width?: string
 };
-const ClientContent = styled.div<ClientContentProps>``;
+const StyledClients = styled.div<StyledClientsProps>`
+  padding: 100px 0;`;

@@ -1,5 +1,4 @@
 import { SectionText } from "../components/styled/SectionText";
-import { Section } from "../components/styled/Section";
 import { Container } from "../components/styled/Container";
 import styled from "styled-components";
 import { SectionTitle } from "../components/styled/SectionTitle";
@@ -10,52 +9,51 @@ import { theme } from "../styles/Theme.styled";
 export const Contact = () => {
   return (
     <StyledContact>
-      <Section>
-        <Container>
-          <FlexWrapper wrap={"wrap"} align={"center"} rowGap={"3rem"}>
-            <SectionTitle>Get in Touch</SectionTitle>
-            <SectionText>
-              Feel free to contact me. I am availablr for freelance!
-            </SectionText>
-            <StyledForm>
-              <FlexWrapper
-                wrap={"wrap"}
-                justify={"space-between"}
-                gap={"1.25rem"}
-              >
-                <StyledLabel>
-                  Your name
-                  <StyledField placeholder={"Your name"} />
-                </StyledLabel>
+      <Container>
+        <FlexWrapper wrap={"wrap"} align={"center"} rowgap={"3rem"}>
+          <SectionTitle>Get in Touch</SectionTitle>
+          <SectionText>
+            Feel free to contact me. I am availablr for freelance!
+          </SectionText>
+          <StyledForm>
+            <FlexWrapper
+              wrap={"wrap"}
+              justify={"space-between"}
+              gap={"1.25rem"}
+            >
+              <StyledLabel>
+                Your name
+                <StyledField placeholder={"Your name"} />
+              </StyledLabel>
 
-                <StyledLabel>
-                  Your E-mail
-                  <StyledField placeholder={"Your E-mail"} />
-                </StyledLabel>
+              <StyledLabel>
+                Your E-mail
+                <StyledField placeholder={"Your E-mail"} />
+              </StyledLabel>
 
-                <StyledLabel>
-                  Your phone
-                  <StyledField placeholder={"Your phone"} />
-                </StyledLabel>
+              <StyledLabel>
+                Your phone
+                <StyledField placeholder={"Your phone"} />
+              </StyledLabel>
 
-                <StyledLabel>
-                  Your message
-                  <StyledField as={"textarea"} placeholder={"Your message"} />
-                </StyledLabel>
+              <StyledLabel>
+                Your message
+                <StyledField as={"textarea"} placeholder={"Your message"} />
+              </StyledLabel>
 
-                <StyledButton type={"submit"}>Send Message</StyledButton>
-              </FlexWrapper>
-            </StyledForm>
-          </FlexWrapper>
-        </Container>
-      </Section>
+              <StyledButton type={"submit"}>Send Message</StyledButton>
+            </FlexWrapper>
+          </StyledForm>
+        </FlexWrapper>
+      </Container>
     </StyledContact>
   );
 };
 
 type StyledContactProps = {};
-const StyledContact = styled.div<StyledContactProps>`
+const StyledContact = styled.section<StyledContactProps>`
   background: ${theme.colors.lightBg};
+  padding: 100px 0;
   position: relative;
 
   &:before {
