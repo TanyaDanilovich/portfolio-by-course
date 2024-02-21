@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme.styled";
-import {Menu, StyledMenu} from "../../components/Menu";
+import {Menu, StyledMenu} from '../../components/Menu';
+
 
 type props = {};
 export const HeaderDesktopMenu = ({}: props) => {
@@ -12,7 +13,9 @@ export const HeaderDesktopMenu = ({}: props) => {
 };
 
 type StyledHeaderDesktopMenuProps = {};
-const StyledHeaderDesktopMenu = styled(StyledMenu)<StyledHeaderDesktopMenuProps>`
+const StyledHeaderDesktopMenu = styled(
+  StyledMenu,
+)<StyledHeaderDesktopMenuProps>`
   @media ${theme.media.tablet} {
     display: none;
   }

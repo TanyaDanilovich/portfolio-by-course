@@ -37,4 +37,6 @@ type StyledClientsProps = {
   // width?: string
 };
 const StyledClients = styled.div<StyledClientsProps>`
-  padding: 100px 0;`;
+  padding: 100px 0;
+overflow:hidden;
+`;

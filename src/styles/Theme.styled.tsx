@@ -10,7 +10,7 @@ export const theme = {
     grayMedium: "#ABB3BA",
   },
   typography: {
-    dark: "#000",
+    dark: "#111235",
     light: "#fff",
   },
 
@@ -25,4 +25,6 @@ export const theme = {
     widescreen: `screen and (max-width:${BREAKPOINTS["widescreen"]})`,
     extraWidescreen: `screen and (max-width:${BREAKPOINTS["extra-widescreen"]})`,
   },
+  borderRed1: "border: 1px solid red",
+  borderGreen1: "border: 1px solid green",
 };

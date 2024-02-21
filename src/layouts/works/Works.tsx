@@ -37,4 +37,5 @@ type StyledWorksProps = {};
 const StyledWorks = styled.section<StyledWorksProps>`
   background-color: ${theme.colors.lightBg};
   padding: 100px 0;
+  overflow:hidden;
 `;

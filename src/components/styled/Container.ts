@@ -9,5 +9,7 @@ export const Container = styled.div<ContainerProps>`
   min-height: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  display:grid;
+  align-self:center;
   //border: 1px solid red;
 `;

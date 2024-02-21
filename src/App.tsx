@@ -1,4 +1,3 @@
-import "./App.css";
 import { Header } from "./layouts/header/Header";
 import { Intro } from "./layouts/Intro";
 import { About } from "./layouts/About";
@@ -10,7 +9,7 @@ import { Footer } from "./layouts/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Intro />
       <About />
@@ -24,4 +23,3 @@ function App() {
 }
 
 export default App;
-

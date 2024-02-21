@@ -16,6 +16,7 @@
 
 import styled from "styled-components";
 import logo from "../assets/png/logo-default-228x67.png";
+import { theme } from "../styles/Theme.styled";
 
 type props = {
   height?: string;
@@ -27,4 +28,7 @@ export const Logo = ({}: props) => {
 type StyledLogoProps = {};
 const StyledLogo = styled.span<StyledLogoProps>`
   font-size: 2rem;
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
 `;
