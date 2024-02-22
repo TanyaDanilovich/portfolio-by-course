@@ -4,7 +4,7 @@ import { Skill } from "./Skill";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { Container } from "../../components/styled/Container";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Skills = () => {
   return (
@@ -44,6 +44,6 @@ const StyledSkills = styled.section<StyledSkillsProps>`
     display: none;
   }
 
-  background-color: ${theme.colors.dark};
+  background-color: ${myTheme.colors.dark};
   width: 100%;
 `;

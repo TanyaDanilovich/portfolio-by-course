@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../styles/Theme.styled";
-import {Menu, StyledMenu} from '../../components/Menu';
-
+import { myTheme } from "../../styles/MyTheme.styled";
+import { Menu, StyledMenu } from "../../components/Menu";
 
 type props = { isOpen: boolean };
 export const HeaderMobileMenu = ({ isOpen }: props) => {
@@ -16,10 +15,18 @@ type StyledHeaderMobileMenuProps = { isOpen: boolean };
 const StyledHeaderMobileMenu = styled(StyledMenu)<StyledHeaderMobileMenuProps>`
   display: none !important;
 
-  @media ${theme.media.tablet} {
+  @media ${myTheme.media.tablet} {
     display: block !important;
     width: 40vw;
     padding: 3rem;
+  }
+
+  @media ${myTheme.media.mobile} {
+    width: 80vw;
+  }
+
+  @media ${myTheme.media.smallMobile} {
+    width: 100vw;
   }
 
   position: fixed;
@@ -27,20 +34,21 @@ const StyledHeaderMobileMenu = styled(StyledMenu)<StyledHeaderMobileMenuProps>`
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: ${theme.colors.lightBg};
+  background-color: ${myTheme.colors.lightBg};
   z-index: 25;
   font-size: 2rem;
   transform: translateX(-200%);
-  transition: 1s;
+  transition: ${myTheme.duration.middle};
 
   ${(props) =>
-          props.isOpen &&
-          css<{ isOpen: boolean }>`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateX(0);
-          `}
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(0);
+      transition: ${myTheme.duration.middle};
+    `}
   ul {
     padding-top: 30vw;
     flex-direction: column;

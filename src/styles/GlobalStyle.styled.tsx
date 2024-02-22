@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./Theme.styled";
+import { myTheme } from "./MyTheme.styled";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -28,11 +28,17 @@ export const GlobalStyle = createGlobalStyle`
     --fs-900: 2.5rem;
 
 
+    --fs-h1: clamp(2rem, 3vw + 1rem, 3.625rem);
+    --fs-h2: clamp(1.875rem, 3vw + 1rem, 4.0625rem);
+    --fs-h3: clamp(1.25rem, 1vw + 1rem, 2rem);
+
+
     /* Fonts: Line Height */
     --fonts-line-body: 1.5;
     --fonts-line-heading: 1.25;
 
-
+    /* padding */
+    
     /* Borders */
     --borders-radius: 0;
     --borders-color: rgba(34, 36, 38, 0.15);
@@ -60,25 +66,25 @@ export const GlobalStyle = createGlobalStyle`
     font-family: var(--fonts-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${theme.colors.dark};
+    color: ${myTheme.colors.dark};
 
   }
 
   h1, h2, h3 {
     font-family: var(--fonts-heading);
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   h1 {
-    font-size: clamp(2rem, 3vw + 1rem, 3.625rem);
+    font-size: var(--fs-h1);
   }
 
   h2 {
-    font-size: clamp(1.875rem, 3vw + 1rem, 4.0625rem);
+    font-size: var(--fs-h2);
   }
 
   h3 {
-    font-size: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+    font-size: var(--fs-h3);
   }
 
   a {

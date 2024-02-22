@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import iconSprite from "../assets/svg/spriteWeather.svg";
-import { theme } from "../styles/Theme.styled";
+import { myTheme } from "../styles/MyTheme.styled";
 
 type props = {
   id: string;
@@ -35,5 +35,5 @@ type StyledIconProps = {
   fill?: string;
 };
 const StyledIcon = styled.svg<StyledIconProps>`
-  fill: ${(props) => props.fill || theme.colors.accent_2};
+  fill: ${(props) => props.fill || myTheme.colors.accent_2};
 `;

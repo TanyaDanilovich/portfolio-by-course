@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 import {Menu, StyledMenu} from '../../components/Menu';
 
 
@@ -16,7 +16,7 @@ type StyledHeaderDesktopMenuProps = {};
 const StyledHeaderDesktopMenu = styled(
   StyledMenu,
 )<StyledHeaderDesktopMenuProps>`
-  @media ${theme.media.tablet} {
+  @media ${myTheme.media.tablet} {
     display: none;
   }
 `;

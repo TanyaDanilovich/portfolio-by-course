@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import photo from "../assets/jpg/photo/person-01-630x866.jpg";
 import { Container } from "../components/styled/Container";
-import { theme } from "../styles/Theme.styled";
+import { myTheme } from "../styles/MyTheme.styled";
 import { FlexWrapper } from "../components/styled/FlexWrapper";
 import { LinkAsButton } from "../components/styled/LinkAsButton";
 import { Icon } from "../components/Icon";
@@ -11,10 +11,12 @@ export const Intro = () => {
   return (
     <StyledIntro>
       <Container>
-        <FlexWrapper justify={"space-around"}>
+        <FlexWrapper justify={"space-around"} wrap={"wrap"} gap={"2rem"}>
           <IntroContentItem>
-            <span>Hi!</span>
-            <IntroTitle>I'm a web developer</IntroTitle>
+            <div>
+              <span>Hi!</span>
+              <IntroTitle>I'm a&nbsp;web&nbsp;developer</IntroTitle>
+            </div>
             <p>ready to work on the next big project for your business</p>
             <LinkAsButton>Get in Touch</LinkAsButton>
           </IntroContentItem>
@@ -31,28 +33,55 @@ export const Intro = () => {
   );
 };
 
-type StyledIntroProps = {};
-const StyledIntro = styled.section<StyledIntroProps>`
-  background-color: ${theme.colors.lightBg};
-  padding: 100px 0;
+const StyledIntro = styled.section<{}>`
+  background-color: ${myTheme.colors.lightBg};
+
+  @media ${myTheme.media.tablet} {
+    padding-block: ${myTheme.padding.section};
+  }
 `;
 
-type IntroTitleProps = {};
-const IntroTitle = styled.h1<IntroTitleProps>`
-  display: inline-block;
-
+const IntroTitle = styled.h1<{}>`
+  display: inline;
+  padding-left: 1rem;
   font-weight: 900;
 `;
 
-type IntroContentItemProps = {};
-const IntroContentItem = styled.div<IntroContentItemProps>`
-  max-width: 40%;
+const IntroContentItem = styled.div<{}>`
+  &:first-child {
+    & div {
+      white-space: break-spaces;
+    }
+
+    @media ${myTheme.media.tablet} {
+      width: 100%;
+      align-items: center;
+      p {
+        margin-inline: 2rem;
+        text-align: center;
+      }
+
+      & div {
+        text-align: center;
+      }
+    }
+  }
+
+  &:last-child {
+    @media ${myTheme.media.tablet} {
+      margin-inline: 2rem;
+      width: 50%;
+    }
+  }
+
+  width: 40%;
   object-fit: cover;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  // ${myTheme.border.green_1};
 
   img {
     width: 100%;
@@ -63,29 +92,32 @@ const IntroContentItem = styled.div<IntroContentItemProps>`
     content: "";
     width: 30px;
     height: 30px;
-    background-color: ${theme.colors.accent_1};
+    background-color: ${myTheme.colors.accent_1};
     right: 0;
     top: 0;
   }
 
-  a {
-    margin-top: 4rem;
+  p {
+    margin-left: max(5vw, 2rem);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: var(--fs-h3);
   }
 
-  p {
-    margin-left: 5rem;
+  span {
+    font-size: var(--fs-h1);
   }
 `;
 
-type IntroLinkProps = {};
-const IntroLink = styled.a<IntroLinkProps>`
+const IntroLink = styled.a<{}>`
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 90px;
-  height: 90px;
-  background-color: ${theme.colors.accent_2};
+  width: min(30%, 90px);
+  //width: clamp(30%, 5vw, 90px);
+  aspect-ratio: 1/1;
+  background-color: ${myTheme.colors.accent_2};
   left: 0;
   bottom: 0;
 `;

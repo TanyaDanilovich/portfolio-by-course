@@ -6,6 +6,7 @@ import { clientsData } from "./clientsData";
 import { Client } from "./Client";
 import { Container } from "../../components/styled/Container";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Clients = () => {
   return (
@@ -37,6 +38,6 @@ type StyledClientsProps = {
   // width?: string
 };
 const StyledClients = styled.div<StyledClientsProps>`
-  padding: 100px 0;
+  padding-block: ${myTheme.padding.section};
 overflow:hidden;
 `;

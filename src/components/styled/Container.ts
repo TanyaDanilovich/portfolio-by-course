@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import {theme} from '../../styles/Theme.styled';
+import {myTheme} from '../../styles/MyTheme.styled';
 
 type ContainerProps = {};
 export const Container = styled.div<ContainerProps>`
   margin-inline: auto;
-  max-width: ${theme.breakpoints.desktop};
+  max-width: ${myTheme.breakpoints.desktop};
   width: 100%;
   min-height: 100%;
   padding: 0 15px;

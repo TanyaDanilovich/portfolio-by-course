@@ -4,6 +4,7 @@ import { SectionText } from "../components/styled/SectionText";
 import { Container } from "../components/styled/Container";
 import { SectionTitle } from "../components/styled/SectionTitle";
 import { LinkAsButton } from "../components/styled/LinkAsButton";
+import { myTheme } from "../styles/MyTheme.styled";
 
 export const About = () => {
   return (
@@ -27,5 +28,5 @@ export const About = () => {
 
 type StyledAboutProps = {};
 const StyledAbout = styled.section<StyledAboutProps>`
-  padding: 100px 0;
+  padding-block: ${myTheme.padding.section};
 `;

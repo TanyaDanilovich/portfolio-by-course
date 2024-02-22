@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SectionTitle } from "../components/styled/SectionTitle";
 import { StyledButton } from "../components/styled/StyledButton";
 import { FlexWrapper } from "../components/styled/FlexWrapper";
-import { theme } from "../styles/Theme.styled";
+import { myTheme } from "../styles/MyTheme.styled";
 
 export const Contact = () => {
   return (
@@ -52,8 +52,8 @@ export const Contact = () => {
 
 type StyledContactProps = {};
 const StyledContact = styled.section<StyledContactProps>`
-  background: ${theme.colors.lightBg};
-  padding: 100px 0;
+  background: ${myTheme.colors.lightBg};
+  padding-block: ${myTheme.padding.section};
   position: relative;
 
   &:before {
@@ -63,8 +63,8 @@ const StyledContact = styled.section<StyledContactProps>`
     width: 100%;
     top: 0;
     bottom: 50%;
-    border-bottom: 7px solid ${theme.colors.accent_1};
-    background-color: ${theme.colors.accent_2};
+    border-bottom: 7px solid ${myTheme.colors.accent_1};
+    background-color: ${myTheme.colors.accent_2};
     z-index: 0;
   }
 
@@ -79,7 +79,7 @@ const StyledContact = styled.section<StyledContactProps>`
 type StyledFormProps = {};
 const StyledForm = styled.form<StyledFormProps>`
   width: 100%;
-  background-color: ${theme.colors.light};
+  background-color: ${myTheme.colors.light};
   padding: 2rem 2rem 3rem;
   box-shadow: 30px 60px 50px rgba(17, 18, 53, 0.08);
   position: relative;
@@ -109,7 +109,7 @@ const StyledForm = styled.form<StyledFormProps>`
 type StyledFieldProps = {};
 const StyledField = styled.input<StyledFieldProps>`
   width: 100%;
-  background-color: ${theme.colors.lightBg};
+  background-color: ${myTheme.colors.lightBg};
   padding: 1rem;
   margin-top: 0.7rem;
   text-overflow: ellipsis;
@@ -118,12 +118,12 @@ const StyledField = styled.input<StyledFieldProps>`
   font-family: "Open Sans", sans-serif;
 
   &:focus-visible {
-    background-color: ${theme.colors.light};
+    background-color: ${myTheme.colors.light};
     outline: none;
   }
 
   &::placeholder {
-    color: ${theme.colors.grayMedium};
+    color: ${myTheme.colors.grayMedium};
     letter-spacing: 1px;
   }
 `;

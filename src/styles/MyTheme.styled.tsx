@@ -1,6 +1,6 @@
 import { BREAKPOINTS } from "../components/styled/constants";
 
-export const theme = {
+export const myTheme = {
   colors: {
     dark: "#111235",
     light: "#fff",
@@ -25,6 +25,18 @@ export const theme = {
     widescreen: `screen and (max-width:${BREAKPOINTS["widescreen"]})`,
     extraWidescreen: `screen and (max-width:${BREAKPOINTS["extra-widescreen"]})`,
   },
-  borderRed1: "border: 1px solid red",
-  borderGreen1: "border: 1px solid green",
+  border: {
+    red_1: "border: 1px solid red",
+    green_1: "border: 1px solid green",
+    red_5: "border: 5px solid red",
+    green_5: "border: 5px solid green",
+  },
+  padding: {
+    section: "clamp(50px, 10dvh, 100px)",
+  },
+  duration: {
+    long: "1s",
+    middle: "0.5s",
+    short: "250ms",
+  },
 };

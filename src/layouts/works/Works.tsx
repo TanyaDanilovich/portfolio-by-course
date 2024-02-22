@@ -6,7 +6,7 @@ import { worksData } from "./worksData";
 import { Work } from "./Work";
 import { Container } from "../../components/styled/Container";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Works = () => {
   return (
@@ -35,7 +35,7 @@ export const Works = () => {
 
 type StyledWorksProps = {};
 const StyledWorks = styled.section<StyledWorksProps>`
-  background-color: ${theme.colors.lightBg};
-  padding: 100px 0;
+  background-color: ${myTheme.colors.lightBg};
+  padding-block: ${myTheme.padding.section};
   overflow:hidden;
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../components/styled/Container";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { Logo } from "../../components/Logo";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 import { HeaderDesktopMenu } from "./HeaderDesktopMenu";
 import { HeaderMobileMenu } from "./HeaderMobileMenu";
 import { BurgerButton } from "../../components/BurgerButton";
@@ -42,12 +42,12 @@ export const Header = () => {
 };
 
 const StyledOuterHeader = styled.header<{}>`
-  @media ${theme.media.tablet} {
+  @media ${myTheme.media.tablet} {
     height: 60px;
     top: -1px;
   }
 
-  background-color: ${theme.colors.lightBg};
+  background-color: ${myTheme.colors.lightBg};
   font-size: 20px;
   height: 140px;
   position: sticky;
@@ -56,7 +56,7 @@ const StyledOuterHeader = styled.header<{}>`
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
-  // ${theme.borderRed1}
+  ${myTheme.border.green_1};
 `;
 
 const StyledInnerHeader = styled.div<{}>`
@@ -67,14 +67,13 @@ const StyledInnerHeader = styled.div<{}>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // ${theme.borderRed1}
 `;
 
 const HeaderPanel = styled.div<{}>`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media ${theme.media.tablet} {
+  @media ${myTheme.media.tablet} {
     flex-grow: 1;
   }
 `;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../styles/Theme.styled";
+import { myTheme } from "../styles/MyTheme.styled";
 
 type props = {
   isOpen: boolean;
@@ -16,7 +16,7 @@ export const BurgerButton = ({ isOpen, callback }: props) => {
 const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
   display: none;
   border: none;
-  @media ${theme.media.tablet} {
+  @media ${myTheme.media.tablet} {
     display: flex;
   }
   width: 40px;
@@ -27,51 +27,50 @@ const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
   align-items: center;
   //border: none;
 
-
   span {
     display: block;
     height: 3px;
     width: 30px;
-    background-color: ${theme.typography.dark};
+    background-color: ${myTheme.typography.dark};
     //transition: 0.5s;
 
     ${(props) =>
-            props.isOpen &&
-            css<{ isOpen: boolean }>`
-              background-color: transparent;
-            `}
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
+        background-color: transparent;
+      `}
     &:before,
     &:after {
       position: absolute;
       content: "";
       height: 3px;
       width: 30px;
-      background-color: ${theme.typography.dark};
+      background-color: ${myTheme.typography.dark};
       left: 5px;
       transform: rotate(0) translateX(0) translateY(0);
-      transition: 0.5s;
+      transition: ${myTheme.duration.middle};
     }
 
     &:before {
       transform: translateY(10px);
 
       ${(props) =>
-              props.isOpen &&
-              css<{ isOpen: boolean }>`
-                transform: rotate(-45deg) translateX(-4px) translateY(-4px);
-                width: 40px;
-              `}
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          transform: rotate(-45deg) translateX(-4px) translateY(-4px);
+          width: 40px;
+        `}
     }
 
     &:after {
       transform: translateY(-10px);
 
       ${(props) =>
-              props.isOpen &&
-              css<{ isOpen: boolean }>`
-                transform: rotate(45deg) translateX(-4px) translateY(4px);
-                width: 40px;
-              `}
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          transform: rotate(45deg) translateX(-4px) translateY(4px);
+          width: 40px;
+        `}
     }
   }
 `;

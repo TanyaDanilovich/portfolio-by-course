@@ -4,7 +4,7 @@ import { SkillType } from "./skill.types.";
 import React from "react";
 import { Icon } from "../../components/Icon";
 import { SectionSecondaryTitle } from "../../components/styled/SectionSecondaryTitle";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 
 type props = SkillType;
@@ -34,7 +34,7 @@ const StyledSkill = styled.article<StyledSkillProps>`
   outline: 1px solid rgba(255, 255, 255, 0.1);
 
   h3 {
-    color: ${theme.colors.light};
+    color: ${myTheme.colors.light};
   }
 
   width: 33.333%;
@@ -43,11 +43,11 @@ const StyledSkill = styled.article<StyledSkillProps>`
     background-color: rgba(255, 255, 255, 0.05);
 
     h3 {
-      color: ${theme.colors.accent_1};
+      color: ${myTheme.colors.accent_1};
     }
 
     svg {
-      fill: ${theme.colors.accent_2};
+      fill: ${myTheme.colors.accent_2};
     }
   }
 `;

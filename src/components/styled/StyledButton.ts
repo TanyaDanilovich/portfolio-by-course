@@ -1,4 +1,4 @@
-import {theme} from '../../styles/Theme.styled';
+import {myTheme} from '../../styles/MyTheme.styled';
 import styled from 'styled-components';
 
 
@@ -11,7 +11,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: 1.25rem;
   font-weight: 500;
   padding: 1.1rem 0;
-  color: ${theme.colors.light};
-  background-color: ${theme.colors.dark};
+  color: ${myTheme.colors.light};
+  background-color: ${myTheme.colors.dark};
   cursor: pointer;
 `;

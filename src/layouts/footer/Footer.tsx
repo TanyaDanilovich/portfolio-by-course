@@ -6,7 +6,7 @@ import { Icon } from "../../components/Icon";
 import { socialNetworksData } from "./socialLinksData";
 import socialNetworkSprite from "../../assets/svg/socialNetworkSprite.svg";
 import { Menu } from "../../components/Menu";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Footer = () => {
   return (
@@ -48,8 +48,8 @@ export const Footer = () => {
 
 type StyledFooterProps = {};
 const StyledFooter = styled.footer<StyledFooterProps>`
-  background-color: ${theme.colors.dark};
-  color: ${theme.colors.light};
+  background-color: ${myTheme.colors.dark};
+  color: ${myTheme.colors.light};
   padding: 2rem;
   font-size: 14px;
   letter-spacing: 2px;
@@ -62,14 +62,14 @@ const StyledFooter = styled.footer<StyledFooterProps>`
   }
 
   svg:hover {
-    fill: ${theme.colors.accent_2};
+    fill: ${myTheme.colors.accent_2};
   }
 `;
 
 type FooterContactsProps = {};
 const FooterContacts = styled.div<FooterContactsProps>`
-  background-color: ${theme.colors.dark};
-  color: ${theme.colors.light};
+  background-color: ${myTheme.colors.dark};
+  color: ${myTheme.colors.light};
   width: calc(50% - 1rem);
 
   ul {

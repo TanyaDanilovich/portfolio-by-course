@@ -16,7 +16,7 @@
 
 import styled from "styled-components";
 import logo from "../assets/png/logo-default-228x67.png";
-import { theme } from "../styles/Theme.styled";
+import { myTheme } from "../styles/MyTheme.styled";
 
 type props = {
   height?: string;
