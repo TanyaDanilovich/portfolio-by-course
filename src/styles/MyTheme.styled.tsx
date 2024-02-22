@@ -25,12 +25,6 @@ export const myTheme = {
     widescreen: `screen and (max-width:${BREAKPOINTS["widescreen"]})`,
     extraWidescreen: `screen and (max-width:${BREAKPOINTS["extra-widescreen"]})`,
   },
-  border: {
-    red_1: "border: 1px solid red",
-    green_1: "border: 1px solid green",
-    red_5: "border: 5px solid red",
-    green_5: "border: 5px solid green",
-  },
   padding: {
     section: "clamp(50px, 10dvh, 100px)",
   },

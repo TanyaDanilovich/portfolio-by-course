@@ -7,6 +7,7 @@ import { HeaderDesktopMenu } from "./HeaderDesktopMenu";
 import { HeaderMobileMenu } from "./HeaderMobileMenu";
 import { BurgerButton } from "../../components/BurgerButton";
 import { useState } from "react";
+import { border } from "../../components/styled/mixins";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +57,7 @@ const StyledOuterHeader = styled.header<{}>`
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
-  ${myTheme.border.green_1};
+  ${border()};
 `;
 
 const StyledInnerHeader = styled.div<{}>`

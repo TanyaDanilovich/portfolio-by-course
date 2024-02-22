@@ -81,7 +81,6 @@ const IntroContentItem = styled.div<{}>`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  // ${myTheme.border.green_1};
 
   img {
     width: 100%;
