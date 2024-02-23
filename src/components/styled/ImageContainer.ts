@@ -14,7 +14,7 @@ export const ImageContainer = styled.div<ImageContainerProps>`
   height: ${(props) => props.height || "auto"};
   border-radius: ${(props) => props.radius || "0"};
   overflow: hidden;
-  color: ${(props) => props.color || myTheme.typography.dark};
+  color: ${(props) => props.color || myTheme.font.color.dark};
   background: ${(props) => props.background || myTheme.colors.light};
 opacity:${(props) => props.opacity || '1'};;
   img {

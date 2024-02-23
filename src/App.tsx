@@ -5,7 +5,6 @@ import { Skills } from "./layouts/skills/Skills";
 import { Works } from "./layouts/works/Works";
 import { Clients } from "./layouts/clients/Clients";
 import { Contact } from "./layouts/Contact";
-import { Footer } from "./layouts/footer/Footer";
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
       <Works />
       <Clients />
       <Contact />
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import { BREAKPOINTS } from "../components/styled/constants";
+import { BREAKPOINTS, SECTION_TITLE_PADDING } from "../common/constants";
+import { getResponsiveFontSize } from "../common/utils/getResponsiveFontSize";
 
 export const myTheme = {
   colors: {
@@ -9,9 +10,25 @@ export const myTheme = {
     accent_2: "#b9e1d7",
     grayMedium: "#ABB3BA",
   },
-  typography: {
-    dark: "#111235",
-    light: "#fff",
+
+  font: {
+    color: {
+      dark: "#111235",
+      medium: "#535372",
+      light: "#fff",
+    },
+    weight: {
+      normal: 400,
+      light: 200,
+      bold: 700,
+      extraBold: 900,
+    },
+    size: {
+      h1: "clamp(2rem, 3vw + 1rem, 3.625rem)",
+      h2: "clamp(1.875rem, 3vw + 1rem, 4.0625rem)",
+      h3: "clamp(1.25rem, 1vw + 1rem, 2rem)",
+      p: getResponsiveFontSize(16.875, 768, 20, 1200),
+    },
   },
 
   breakpoints: BREAKPOINTS,
@@ -25,8 +42,14 @@ export const myTheme = {
     widescreen: `screen and (max-width:${BREAKPOINTS["widescreen"]})`,
     extraWidescreen: `screen and (max-width:${BREAKPOINTS["extra-widescreen"]})`,
   },
+
   padding: {
     section: "clamp(50px, 10dvh, 100px)",
+    sectionTitle: {
+      left: SECTION_TITLE_PADDING.left,
+      beforeWidth: SECTION_TITLE_PADDING.beforeWidth,
+      beforeLeft: `calc(${SECTION_TITLE_PADDING.left} - ${SECTION_TITLE_PADDING.beforeWidth})`,
+    },
   },
   duration: {
     long: "1s",

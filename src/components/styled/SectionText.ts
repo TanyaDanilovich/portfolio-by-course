@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import { myTheme } from "../../styles/MyTheme.styled";
 
-type SectionTextProps = {
-  // height?: string
-  // width?: string
-};
-export const SectionText = styled.p<SectionTextProps>`
-  
+export const SectionText = styled.p<{}>`
+  color: ${myTheme.font.color.medium};
+  font-weight: 400;
+  font-size: ${myTheme.font.size.p};
 `;

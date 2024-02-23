@@ -4,22 +4,20 @@ import { myTheme } from "../../styles/MyTheme.styled";
 type SectionTitleProps = {};
 export const SectionTitle = styled.h2<SectionTitleProps>`
   line-height: 5rem;
-  font-weight: 900;
+  font-weight: ${myTheme.font.weight.bold};
   letter-spacing: 2px;
-  color: ${myTheme.colors.dark};
+  font-size: ${myTheme.font.size.h2};
   position: relative;
-  padding-left: 65px;
-  //outline: 2px solid red;
+  padding-left: ${myTheme.padding.sectionTitle.left};
 
   &:before {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     height: 1px;
-    width: 50px;
+    width: ${myTheme.padding.sectionTitle.beforeWidth};
     background-color: ${myTheme.colors.accent_1};
-    left: 0;
+    left: -15px;
     transform: translateY(2.5rem) translateX(1rem);
-
   }
 `;

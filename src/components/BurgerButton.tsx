@@ -31,7 +31,7 @@ const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     height: 3px;
     width: 30px;
-    background-color: ${myTheme.typography.dark};
+    background-color: ${myTheme.font.color.dark};
     //transition: 0.5s;
 
     ${(props) =>
@@ -45,7 +45,7 @@ const StyledBurgerButton = styled.button<{ isOpen: boolean }>`
       content: "";
       height: 3px;
       width: 30px;
-      background-color: ${myTheme.typography.dark};
+      background-color: ${myTheme.font.color.dark};
       left: 5px;
       transform: rotate(0) translateX(0) translateY(0);
       transition: ${myTheme.duration.middle};

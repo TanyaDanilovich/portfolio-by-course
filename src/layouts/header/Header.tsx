@@ -7,7 +7,7 @@ import { HeaderDesktopMenu } from "./HeaderDesktopMenu";
 import { HeaderMobileMenu } from "./HeaderMobileMenu";
 import { BurgerButton } from "../../components/BurgerButton";
 import { useState } from "react";
-import { border } from "../../components/styled/mixins";
+import { border } from "../../styles/mixins";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -45,6 +45,7 @@ const IntroTitle = styled.h1<{}>`
   display: inline;
   padding-left: 1rem;
   font-weight: 900;
+  font-size: ${myTheme.font.size.h1};
 `;
 
 const IntroContentItem = styled.div<{}>`
@@ -100,11 +101,11 @@ const IntroContentItem = styled.div<{}>`
     margin-left: max(5vw, 2rem);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: var(--fs-h3);
+    font-size: ${myTheme.font.size.p};
   }
 
   span {
-    font-size: var(--fs-h1);
+    font-size: ${myTheme.font.size.h1};
   }
 `;
 
