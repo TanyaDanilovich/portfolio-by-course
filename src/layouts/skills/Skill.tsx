@@ -32,12 +32,15 @@ type StyledSkillProps = {};
 const StyledSkill = styled.article<StyledSkillProps>`
   padding: 1rem;
   outline: 1px solid rgba(255, 255, 255, 0.1);
+  width: 33.333%;
+
+  @media ${myTheme.media.mobile} {
+    width: 50%;
+  }
 
   h3 {
     color: ${myTheme.colors.light};
   }
-
-  width: 33.333%;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.05);
@@ -52,8 +55,3 @@ const StyledSkill = styled.article<StyledSkillProps>`
   }
 `;
 
-type StyleSkillTitleProps = {};
-const StyleSkillTitle = styled.h2<StyleSkillTitleProps>``;
-
-type SkillTextProps = {};
-const SkillText = styled.div<SkillTextProps>``;
