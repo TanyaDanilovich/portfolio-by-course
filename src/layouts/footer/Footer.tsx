@@ -7,6 +7,7 @@ import { socialNetworksData } from "./socialLinksData";
 import socialNetworkSprite from "../../assets/svg/socialNetworkSprite.svg";
 import { Menu } from "../../components/Menu";
 import { myTheme } from "../../styles/MyTheme.styled";
+import { outline } from "../../styles/mixins";
 
 export const Footer = () => {
   return (
@@ -38,7 +39,7 @@ export const Footer = () => {
           </FooterContacts>
 
           <Copiryting>
-            © 2023 Tatsiana Danilovich, All Rights Reserved.
+            © 2023 Tatsiana Danilovich, All&nbsp;Rights&nbsp;Reserved.
           </Copiryting>
         </Grid>
       </Container>
@@ -48,6 +49,23 @@ export const Footer = () => {
 
 type StyledFooterProps = {};
 const StyledFooter = styled.footer<StyledFooterProps>`
+  @media ${myTheme.media.computer} {
+    ul {
+      flex-direction: column;
+    }
+  }
+  @media ${myTheme.media.tablet} {
+    ul {
+      flex-direction: row;
+    }
+  }
+
+  @media ${myTheme.media.mobile} {
+    ul {
+      display: none;
+    }
+  }
+
   background-color: ${myTheme.colors.dark};
   color: ${myTheme.colors.light};
   padding: 2rem;
@@ -55,11 +73,6 @@ const StyledFooter = styled.footer<StyledFooterProps>`
   letter-spacing: 2px;
   line-height: 180%;
   font-weight: 400;
-
-  nav {
-    width: calc(50% - 1rem);
-    height: 100%;
-  }
 
   svg:hover {
     fill: ${myTheme.colors.accent_2};
@@ -70,11 +83,12 @@ type FooterContactsProps = {};
 const FooterContacts = styled.div<FooterContactsProps>`
   background-color: ${myTheme.colors.dark};
   color: ${myTheme.colors.light};
-  width: calc(50% - 1rem);
 
   ul {
     padding-top: 1rem;
   }
+
+  // ${outline(5, "yellow")}
 `;
 
 type SocialLinkProps = {};
@@ -87,9 +101,20 @@ const Copiryting = styled.small<CopirytingProps>`
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: smaller;
+  text-align: center;
+  // ${outline(1, "yellow")}
 `;
 
 const Grid = styled.div`
+  @media ${myTheme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  // ${outline(1, "yellow")}
 `;

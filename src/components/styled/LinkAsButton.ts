@@ -6,7 +6,7 @@ export const LinkAsButton = styled.a<LinkAsButtonProps>`
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 1.1rem 0;
   color: ${myTheme.colors.light};
