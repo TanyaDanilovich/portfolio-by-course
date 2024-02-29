@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "../../styles/MyTheme.styled";
+import {outline} from '../../styles/mixins';
 
 type SectionTitleProps = {};
 export const SectionTitle = styled.h2<SectionTitleProps>`
@@ -10,6 +11,7 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
   position: relative;
   padding-left: ${myTheme.padding.sectionTitle.left};
 
+  // ${outline()}
   &:before {
     position: absolute;
     content: "";
@@ -26,6 +28,7 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
       display: none;
     }
 
+    padding-left: 0;
     text-align: center;
   }
 `;
