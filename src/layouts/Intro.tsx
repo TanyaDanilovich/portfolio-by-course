@@ -6,8 +6,12 @@ import { FlexWrapper } from "../components/styled/FlexWrapper";
 import { LinkAsButton } from "../components/styled/LinkAsButton";
 import { Icon } from "../components/Icon";
 import arrowSprite from "../assets/svg/arrowsSprite.svg";
+import { SectionText } from "../components/styled/SectionText";
+import { getResponsiveSize } from "../common/utils/getResponsiveSize";
 
 export const Intro = () => {
+  const textFontSize = getResponsiveSize(22.5, 39);
+  console.log(textFontSize);
   return (
     <StyledIntro>
       <Container>
@@ -17,7 +21,9 @@ export const Intro = () => {
               <span>Hi!</span>
               <IntroTitle>I'm a&nbsp;web&nbsp;developer</IntroTitle>
             </div>
-            <p>ready to work on the next big project for your business</p>
+            <SectionText $fontSize={textFontSize}>
+              ready to work on the next big project for your business
+            </SectionText>
             <LinkAsButton>Get in Touch</LinkAsButton>
           </IntroContentItem>
 
@@ -98,10 +104,9 @@ const IntroContentItem = styled.div<{}>`
   }
 
   p {
-    margin-left: max(5vw, 2rem);
+    margin-left: max(4vw, 2rem);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: ${myTheme.font.size.p};
   }
 
   span {

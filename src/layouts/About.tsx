@@ -6,13 +6,18 @@ import { SectionTitle } from "../components/styled/SectionTitle";
 import { LinkAsButton } from "../components/styled/LinkAsButton";
 import { myTheme } from "../styles/MyTheme.styled";
 import { FlexWrapper } from "../components/styled/FlexWrapper";
-import { getResponsiveFontSize } from "../common/utils/getResponsiveFontSize";
+import { getResponsiveSize } from "../common/utils/getResponsiveSize";
 
 export const About = () => {
+  // const flexMediaQueries: FlexMediaProp = {
+  //     breakpointRequest: "mobile",
+  //     newProp: { direction: "column-reverse" },
+  // };
+
   return (
     <StyledAbout>
       <Container>
-        <FlexWrapper direction={"row-reverse"}>
+        <AboutFlexWrapper>
           <FlexItem>
             <SectionTitle>About me</SectionTitle>
             <SectionText>
@@ -30,19 +35,40 @@ export const About = () => {
           <FlexItem>
             <img alt={"portrait"} src={photo} />
           </FlexItem>
-        </FlexWrapper>
+        </AboutFlexWrapper>
       </Container>
     </StyledAbout>
   );
 };
 
 const StyledAbout = styled.section<{}>`
-  padding-block: ${myTheme.padding.section};
+  padding-block: ${getResponsiveSize(50, 100, 400)};
 `;
 
-const FlexItem = styled.div<{ $fontSize?: string }>`
-  &:first-child {
+
+
+
+
+
+const AboutFlexWrapper = styled.div<{}>`
+  @media ${myTheme.media.mobile} {
+    flex-direction: column-reverse;
   }
+
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+
+
+`;
+
+const FlexItem = styled.div<{}>`
+  @media ${myTheme.media.mobile} {
+    width: 100%;
+    text-align: center;
+  }
+
+  width: 50%;
 
   &:last-child {
     img {
@@ -50,19 +76,14 @@ const FlexItem = styled.div<{ $fontSize?: string }>`
     }
   }
 
-  width: 50%;
-
-  p {
-    line-height: 200%;
-    font-size: ${(props) => props.$fontSize || myTheme.font.size.p};
-  }
-
   p:first-of-type {
-    margin-block-start: 3rem;
+    margin-block-start: ${getResponsiveSize(16, 16 * 3)};
   }
 
   p ~ p {
     margin-block-start: 1rem;
     margin-block-end: 3rem;
   }
+
 `;
+

@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-type StyledFlexWrapperProps = {
+type FlexItemProp = {
   direction?: string;
   justify?: string;
   align?: string;
   wrap?: string;
   gap?: string;
   columnGap?: string;
-  rowgap?: string;
+  rowGap?: string;
   grow?: string;
 };
+
+export type StyledFlexWrapperProps = FlexItemProp;
+
 export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   display: flex;
   flex-direction: ${(props) => props.direction || "row"};
@@ -18,7 +21,6 @@ export const FlexWrapper = styled.div<StyledFlexWrapperProps>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   flex-grow: ${(props) => props.grow || "0"};
   column-gap: ${(props) => props.gap || props.columnGap || "0"};
-  row-gap: ${(props) => props.gap || props.rowgap || "0"};
+  row-gap: ${(props) => props.gap || props.rowGap || "0"};
   height: 100%;
-  //outline: 2px solid blue;
 `;

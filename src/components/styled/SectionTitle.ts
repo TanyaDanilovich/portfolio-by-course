@@ -20,4 +20,12 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
     left: -15px;
     transform: translateY(2.5rem) translateX(1rem);
   }
+
+  @media ${myTheme.media.mobile} {
+    &:before {
+      display: none;
+    }
+
+    text-align: center;
+  }
 `;

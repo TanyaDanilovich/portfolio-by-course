@@ -50,4 +50,7 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
   }
+  p {
+    line-height: 200%;
+  }
 `;

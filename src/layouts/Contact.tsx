@@ -10,7 +10,7 @@ export const Contact = () => {
   return (
     <StyledContact>
       <Container>
-        <FlexWrapper wrap={"wrap"} align={"center"} rowgap={"3rem"}>
+        <FlexWrapper wrap={"wrap"} align={"center"} rowGap ={"3rem"}>
           <SectionTitle>Get in Touch</SectionTitle>
           <SectionText>
             Feel free to contact me. I am availablr for freelance!
