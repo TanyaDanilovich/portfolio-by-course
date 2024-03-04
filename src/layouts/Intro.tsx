@@ -11,7 +11,6 @@ import { getResponsiveSize } from "../common/utils/getResponsiveSize";
 
 export const Intro = () => {
   const textFontSize = getResponsiveSize(22.5, 39);
-  console.log(textFontSize);
   return (
     <StyledIntro>
       <Container>

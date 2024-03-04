@@ -4,12 +4,12 @@ import { WorkType } from "./work.types.";
 import { StyledImage } from "../../components/styled/StyledImage";
 
 type props = WorkType;
-export const Work = ({ id, text, title, imageUrl }: props) => {
+export const Work = ({ id, title, imageUrl }: props) => {
   return (
     <StyledWork>
       <SectionSecondaryTitle>{title}</SectionSecondaryTitle>
       <StyledImage src={imageUrl} />
-      <WorkText>{text}</WorkText>
+      {/*<WorkText>{text}</WorkText>*/}
       <div>
         <WorkLink>Demo</WorkLink>
         <WorkLink>Code</WorkLink>

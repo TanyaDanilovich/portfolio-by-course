@@ -57,7 +57,7 @@ const StyledOuterHeader = styled.header<{}>`
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
-  ${border()};
+  // ${border()};
 `;
 
 const StyledInnerHeader = styled.div<{}>`
