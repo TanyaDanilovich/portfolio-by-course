@@ -3,14 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyle } from "./styles/GlobalStyle.styled";
+import isValidProp from "@emotion/is-prop-valid";
+import { StyleSheetManager } from "styled-components";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <StyleSheetManager shouldForwardProp={(propName) => isValidProp(propName)}>
+      <GlobalStyle />
+      <App />
+    </StyleSheetManager>
   </React.StrictMode>,
 );
 

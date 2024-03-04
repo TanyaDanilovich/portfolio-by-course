@@ -1,38 +1,43 @@
 import styled from "styled-components";
-import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { clientsData } from "./clientsData";
 import { Client } from "./Client";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { Container } from "../../components/styled/Container";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Clients = () => {
   return (
-    <StyledSection>
-      <SectionWrapper>
-        <SectionMainTitle>My clients</SectionMainTitle>
+    <StyledClients>
+      <Container>
+        <SectionTitle>My clients</SectionTitle>
         <SectionText>
           Read the testimonials submitted by my clients and partners. You can
           fully trust their opinions on my solutions.
         </SectionText>
-        <ClientContent>
+        <FlexWrapper>
           {clientsData.map((client) => (
             <Client
+              key={client.id}
               id={client.id}
               name={client.name}
               text={client.text}
               imageUrl={client.imageUrl}
             />
           ))}
-        </ClientContent>
-      </SectionWrapper>
-    </StyledSection>
+        </FlexWrapper>
+      </Container>
+    </StyledClients>
   );
 };
 
-type ClientContentProps = {
+type StyledClientsProps = {
   // height?: string
   // width?: string
 };
-const ClientContent = styled.div<ClientContentProps>``;
+const StyledClients = styled.div<StyledClientsProps>`
+  padding-block: ${myTheme.padding.section};
+overflow:hidden;
+`;

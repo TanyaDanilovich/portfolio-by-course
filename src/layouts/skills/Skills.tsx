@@ -1,16 +1,17 @@
-import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+import { SectionTitle } from "../../components/styled/SectionTitle";
 import { skillsData } from "./skillsData";
 import { Skill } from "./Skill";
-import { StyledFlexWrapper } from "../../components/styled/StyledFlexWrapper";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { Container } from "../../components/styled/Container";
+import styled from "styled-components";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 export const Skills = () => {
   return (
-    <StyledSection>
-      <SectionWrapper>
-        <SectionMainTitle>My Skills</SectionMainTitle>
-        <StyledFlexWrapper>
+    <StyledSkills>
+      <Container>
+        <SectionTitle>My Skills</SectionTitle>
+        <FlexWrapper wrap={"wrap"}>
           {skillsData.map((skill) => (
             <Skill
               id={skill.id}
@@ -20,8 +21,29 @@ export const Skills = () => {
               icon={skill.icon}
             />
           ))}
-        </StyledFlexWrapper>
-      </SectionWrapper>
-    </StyledSection>
+        </FlexWrapper>
+      </Container>
+    </StyledSkills>
   );
 };
+
+type StyledSkillsProps = {};
+const StyledSkills = styled.section<StyledSkillsProps>`
+  
+  div:first-of-type {
+    padding: 0;
+  }
+
+  h2 {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  h2:before {
+    display: none;
+  }
+
+  background-color: ${myTheme.colors.dark};
+  width: 100%;
+`;

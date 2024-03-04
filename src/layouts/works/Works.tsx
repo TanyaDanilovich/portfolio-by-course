@@ -1,38 +1,42 @@
 import styled from "styled-components";
-import { StyledSection } from "../../components/styled/StyledSection";
-import { SectionMainTitle } from "../../components/styled/SectionMainTitle";
+import { SectionTitle } from "../../components/styled/SectionTitle";
 import React from "react";
 import { SectionText } from "../../components/styled/SectionText";
 import { worksData } from "./worksData";
-import { Work } from "./Work";
-import { SectionWrapper } from "../../components/styled/SectionWrapper";
+import { Container } from "../../components/styled/Container";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
+import { myTheme } from "../../styles/MyTheme.styled";
+import { SwipeGallery } from "../../components/swipeGallery/SwipeGallery";
 
 export const Works = () => {
   return (
-    <StyledSection>
-      <SectionWrapper>
-        <SectionMainTitle>My works</SectionMainTitle>
+    <StyledWorks>
+      <Container>
+        <SectionTitle>My works</SectionTitle>
         <SectionText>
           Check out my recent and popular design & branding projects I have
           worked on.
         </SectionText>
-        <WorkContent>
-          {worksData.map((work) => (
-            <Work
-              id={work.id}
-              title={work.title}
-              text={work.text}
-              imageUrl={work.imageUrl}
-            />
-          ))}
-        </WorkContent>
-      </SectionWrapper>
-    </StyledSection>
+        <FlexWrapper>
+          {/*{worksData.map((work) => (*/}
+          {/*  <Work*/}
+          {/*    key={work.id}*/}
+          {/*    id={work.id}*/}
+          {/*    title={work.title}*/}
+          {/*    text={work.text}*/}
+          {/*    imageUrl={work.imageUrl}*/}
+          {/*  />*/}
+          {/*))}*/}
+          <SwipeGallery images={worksData} />
+        </FlexWrapper>
+      </Container>
+    </StyledWorks>
   );
 };
 
-type WorkContentProps = {
-  // height?: string
-  // width?: string
-};
-const WorkContent = styled.div<WorkContentProps>``;
+type StyledWorksProps = {};
+const StyledWorks = styled.section<StyledWorksProps>`
+  background-color: ${myTheme.colors.lightBg};
+  padding-block: ${myTheme.padding.section};
+  overflow: hidden;
+`;

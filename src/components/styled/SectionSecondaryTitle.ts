@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-type SectionSecondaryTitleProps = {
-  // height?: string
-  // width?: string
-};
-export const SectionSecondaryTitle = styled.h2<SectionSecondaryTitleProps>``;
+type SectionSecondaryTitleProps = {};
+export const SectionSecondaryTitle = styled.h3<SectionSecondaryTitleProps>`
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  //cursor:alias;
+`;

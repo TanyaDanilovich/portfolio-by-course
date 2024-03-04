@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ClientType } from "./Client.types.";
 import { StyledImage } from "../../components/styled/StyledImage";
 import { ImageContainer } from "../../components/styled/ImageContainer";
-import { theme } from "../../styles/Theme.styled";
+import { myTheme } from "../../styles/MyTheme.styled";
 
 type props = ClientType;
 export const Client = ({ text, name, imageUrl }: props) => {
@@ -13,7 +13,7 @@ export const Client = ({ text, name, imageUrl }: props) => {
         width={"70px"}
         height={"70px"}
         radius={"50%"}
-        background={theme.colors.contrastBackground_2}
+        background={myTheme.colors.accent_2}
         opacity={"0.5"}
       >
         {imageUrl && <StyledImage src={imageUrl} />}

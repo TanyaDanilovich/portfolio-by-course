@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {theme} from '../../styles/Theme.styled';
+import {myTheme} from '../../styles/MyTheme.styled';
 
 type ImageContainerProps = {
   height?: string;
@@ -14,8 +14,8 @@ export const ImageContainer = styled.div<ImageContainerProps>`
   height: ${(props) => props.height || "auto"};
   border-radius: ${(props) => props.radius || "0"};
   overflow: hidden;
-  color: ${(props) => props.color || theme.typography.dark};
-  background: ${(props) => props.background || theme.colors.backgroundLight};
+  color: ${(props) => props.color || myTheme.font.color.dark};
+  background: ${(props) => props.background || myTheme.colors.light};
 opacity:${(props) => props.opacity || '1'};;
   img {
     display: block;

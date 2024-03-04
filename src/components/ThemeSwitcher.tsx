@@ -3,20 +3,18 @@ import { Icon } from "./Icon";
 import { useState } from "react";
 import { Theme } from "../common/types/common.types";
 
-type props = {
-  // height?: string
-  // width?: string
-};
+type props = {};
 export const ThemeSwitcher = ({}: props) => {
   const [theme, setTheme] = useState<Theme>("light");
 
-  const themeToggler=() => setTheme((prev) => {
-    if (prev === "light") {
-      return "dark";
-    } else {
-      return "light";
-    }
-  });
+  const themeToggler = () =>
+    setTheme((prev) => {
+      if (prev === "light") {
+        return "dark";
+      } else {
+        return "light";
+      }
+    });
 
   return (
     <StyledThemeSwitcher onClick={themeToggler}>

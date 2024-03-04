@@ -1,18 +1,34 @@
-import styled from 'styled-components'
-import logo from '../assets/png/logo-default-228x67.png'
+// import styled from "styled-components";
+// import logo from "../assets/png/logo-default-228x67.png";
+//
+// type props = {
+//   height?: string;
+// };
+// export const Logo = ({}: props) => {
+//   return <StyledLogo src={logo} height={"2rem"} />;
+// };
+//
+// type StyledLogoProps = {};
+// const StyledLogo = styled.img<StyledLogoProps>`
+//   height: 100%;
+//   max-height: ${(props) => props.height || "100%"};
+// `;
+
+import styled from "styled-components";
+import logo from "../assets/png/logo-default-228x67.png";
+import { myTheme } from "../styles/MyTheme.styled";
 
 type props = {
-    // height?: string
-    // width?: string
-}
+  height?: string;
+};
 export const Logo = ({}: props) => {
-    return <StyledLogo src={logo} />
-}
+  return <StyledLogo>Portfolio</StyledLogo>;
+};
 
-type StyledLogoProps = {
-    // height?: string
-    // width?: string
-}
-const StyledLogo = styled.img<StyledLogoProps>`
-    height: 100%;
-`
+type StyledLogoProps = {};
+const StyledLogo = styled.span<StyledLogoProps>`
+  font-size: 2rem;
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+`;
